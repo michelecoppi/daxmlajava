@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <Studenti>
+      <element>
+         <cognome>Cimara</cognome>
+         <nome>Adrian</nome>
+      </element>
+      <element>
+         <cognome>Cerbai</cognome>
+         <nome>Sasha</nome>
+      </element>
+   </Studenti>
+   <annoDiInizio>2019</annoDiInizio>
+   <aula>13tc</aula>
+   <indirizzo>IA</indirizzo>
+   <nome>5A</nome>
+</root>
