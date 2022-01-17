@@ -16,22 +16,30 @@ public class daXmlAJava
     public static void main( String[] args ) throws ParserConfigurationException, SAXException 
     {
         try {
-            File file = new File("classe.xml");
+            String filePath = "classe.xml";
+            File file = new File(filePath);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document document = db.parse(file);
             document.getDocumentElement().normalize();
             //System.out.println("Root Element :" + document.getDocumentElement().getNodeName());
-            NodeList nList = document.getElementsByTagName("Studenti");
+            NodeList nList = document.getElementsByTagName("studenti");
+            NodeList nList2 = document.getElementsByTagName("aula");
+            
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
+                Node nNode2 = nList2.item(temp);
+               
                 //System.out.println("\nElemento Attuale :" + nNode.getNodeName());
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    //System.out.println("Anno di inizio: " + eElement.getAttribute("Studenti"));
-                    System.out.println(eElement.getAttribute("nome")+ eElement.getElementsByTagName("indirizzo").item(0).getTextContent());
-                    System.out.println("Nome: " + eElement.getElementsByTagName("nome").item(0).getTextContent());
-                    System.out.println("Cognome: " + eElement.getElementsByTagName("cognome").item(0).getTextContent());
+                    Element eElement2 = (Element) nNode2;
+                    System.out.println("La classe "+document.getElementsByTagName("classe").item(0).getTextContent()+ document.getElementsByTagName("specializzazione").item(0).getTextContent()+" si trova nell'aula "+eElement2.getElementsByTagName("nome").item(0).getTextContent()+" ed è composta dai seguenti studenti:");
+                    //System.out.println(eElement.getAttribute("nome")+ eElement.getElementsByTagName("indirizzo").item(0).getTextContent());
+                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(0).getTextContent());
+                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(1).getTextContent());
+                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(2).getTextContent());
+                   
                     
                 }
             }

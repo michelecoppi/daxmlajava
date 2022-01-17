@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-   <Studenti>
+   <annoDiInizio>2019</annoDiInizio>
+   <aula>
+      <nome>13TC</nome>
+      <numeroDiBanchi>24</numeroDiBanchi>
+   </aula>
+   <classe>5A</classe>
+   <numeroFinestre>4</numeroFinestre>
+   <specializzazione>IA</specializzazione>
+   <studenti>
       <element>
+         <annoDiNascita>2003</annoDiNascita>
          <cognome>Cimara</cognome>
          <nome>Adrian</nome>
       </element>
       <element>
-         <cognome>Cerbai</cognome>
-         <nome>Sasha</nome>
+         <annoDiNascita>2003</annoDiNascita>
+         <cognome>Bencini</cognome>
+         <nome>Lorenzo</nome>
       </element>
-   </Studenti>
-   <annoDiInizio>2019</annoDiInizio>
-   <aula>13tc</aula>
-   <indirizzo>IA</indirizzo>
-   <nome>5A</nome>
+       <element>
+         <annoDiNascita>2003</annoDiNascita>
+         <cognome>Gigli</cognome>
+         <nome>Filippo</nome>
+      </element>
+   </studenti>
 </root>
