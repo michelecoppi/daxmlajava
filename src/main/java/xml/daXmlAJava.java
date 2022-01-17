@@ -35,10 +35,9 @@ public class daXmlAJava
                     Element eElement = (Element) nNode;
                     Element eElement2 = (Element) nNode2;
                     System.out.println("La classe "+document.getElementsByTagName("classe").item(0).getTextContent()+ document.getElementsByTagName("specializzazione").item(0).getTextContent()+" si trova nell'aula "+eElement2.getElementsByTagName("nome").item(0).getTextContent()+" ed è composta dai seguenti studenti:");
-                    //System.out.println(eElement.getAttribute("nome")+ eElement.getElementsByTagName("indirizzo").item(0).getTextContent());
-                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(0).getTextContent());
-                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(1).getTextContent());
-                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(2).getTextContent());
+                    for(int i=0; i<document.getElementsByTagName("cognome").getLength();i++){
+                    System.out.println( "-"+eElement.getElementsByTagName("cognome").item(i).getTextContent());
+                    }
                    
                     
                 }
