@@ -16,13 +16,14 @@ public class daXmlAJava
     public static void main( String[] args ) throws ParserConfigurationException, SAXException 
     {
         try {
+            //creo il percorso per il file
             String filePath = "classe.xml";
             File file = new File(filePath);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document document = db.parse(file);
             document.getDocumentElement().normalize();
-            //System.out.println("Root Element :" + document.getDocumentElement().getNodeName());
+            //Creo i nodi
             NodeList nList = document.getElementsByTagName("studenti");
             NodeList nList2 = document.getElementsByTagName("aula");
             
@@ -30,7 +31,7 @@ public class daXmlAJava
                 Node nNode = nList.item(temp);
                 Node nNode2 = nList2.item(temp);
                
-                //System.out.println("\nElemento Attuale :" + nNode.getNodeName());
+                //Stampa del file xml
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     Element eElement2 = (Element) nNode2;
